@@ -1,0 +1,154 @@
+/* FORMATAÇÃO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* FORMATAÇÃO GERAL */
+
+/* CONFIG HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    color: #0B2161;
+    height: 100px;
+}
+
+.out-color {
+    height: 10px;
+    background-color: #0B2161;
+}
+
+/* FIM CONFIG HEADER */
+
+/* SECTION CADASTRO-ALUNO */
+
+.cadastro-aluno {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #1439a5;
+}
+
+.cadastro-aluno h2 {
+    text-align: center;
+    margin-top: 55px;
+    color: #1439a5;
+}
+
+.cadastro-aluno span {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 700px;
+    height: 1px;
+    background-color: #1439a5;
+}
+
+.cadastro-aluno h3,
+h4,
+p {
+    color: #1439a5;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.cadastro-aluno p {
+    font-size: 13px;
+}
+
+.logo-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.logo-desc img {
+    width: 150px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+}
+
+
+.form-cad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    color: #1439a5;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input {
+    width: 350px;
+    height: 35px;
+    border: 1px solid #1439a5;
+    border-radius: 5px;
+    margin-top: 2px;
+    padding: 3px 5px;
+    font-size: 20px;
+}
+
+.form-cad #enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 145px;
+    height: 50px;
+    background-color: #1439a5;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-top: 3px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-cad #enviar:hover {
+    background-color: #3c67e6;
+    transition: all ease 0.8s;
+}
+
+/* FIM SECTION CADASTRO-ALUNO */
+
+/* CONFIG FOOTER */
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-top: 25px;
+    background-color: #0B2161;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/* FIM CONFIG FOOTER */

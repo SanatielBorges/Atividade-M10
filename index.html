@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>FORMULÁRIO DE CADASTRO DE ALUNO</h1>
+  </header>
+  <div class="out-color"></div>
+  <section class="cadastro-aluno">
+    <h2>CADASTRO DE ALUNO</h2>
+    <span></span>
+    <div class="logo-desc">
+      <div>
+        <h3>CURSO ENGENHEIRO FRONT-END</h3>
+        <h4>30/04 e 01/05</h4>
+        <p>Criação de páginas WEB com HTML, CSS e JS</p>
+      </div>
+      <div>
+        <img src="https://afubesp.org.br/wp-content/uploads/2022/07/logo_ebac-960x640.png" alt="Logo EBAC">
+      </div>
+    </div>
+    <span></span>
+    <div class="form-cad">
+      <form action="">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name">
+
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" id="telefone">
+
+        <label for="endereco">Endereço</label>
+        <input type="text" name="endereco" id="endereco">
+
+        <label for="uf">UF</label>
+        <input type="text" name="uf" id="uf">
+
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade">
+
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep">
+
+        <input type="submit" name="enviar" id="enviar">
+      </form>
+    </div>
+  </section>
+  <footer>
+    <h3>&copy; EBAC - Todos os direitos reservados - 2023</h3>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      $('#telefone').mask('(00) 00000-0000');
+      $('#cep').mask('00000-000');
+      $('#cpf').mask('000.000.000-00');
+        
+      $('form').validate({
+        rules: {
+            nome: {
+            required: true
+          },
+          cpf: {
+            required: true,
+
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          telefone: {
+            required: true,
+            minlength: 11
+          },
+          endereco: {
+            required: true
+          },
+          uf: {
+            required: true
+          },
+          cidade: {
+            required: true
+          },
+          cep: {
+            required: true,
+            minlength: 8
+          }
+        },
+        messages: {
+          name: 'Por favor, informe o nome',
+          cpf: {
+            required: 'Por favor, informe o CPF',
+            cpf: 'Informe um CPF válido'
+          },
+          email: {
+            required: 'Por favor, informe o e-mail',
+            email: 'Informe um e-mail válido'
+          },
+          telefone: {
+            required: 'Por favor, informe o telefone',
+            minlength: 'O telefone deve ter pelo menos 11 caracteres'
+          },
+          endereco: {
+            required: 'Por favor, informe o endereço'
+          },
+          uf: {
+            required: 'Por favor, informe a UF'
+          },
+          cidade: {
+            required: 'Por favor, informe a cidade'
+          },
+          cep: {
+            required: 'Por favor, informe o CEP',
+            minlength: 'O CEP deve ter pelo menos 8 caracteres'
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
