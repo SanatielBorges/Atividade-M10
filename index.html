@@ -74,7 +74,7 @@
         
       $('form').validate({
         rules: {
-            nome: {
+            name: {
             required: true
           },
           cpf: {
@@ -104,31 +104,34 @@
           }
         },
         messages: {
-          name: 'Por favor, informe o nome',
+          name: {
+            required: '<h4 class="cores">Por favor, informe o nome</h4>',
+          },
+          
           cpf: {
-            required: 'Por favor, informe o CPF',
-            cpf: 'Informe um CPF válido'
+            required: '<h4 class="cores">Por favor, informe o CPF</h4>',
+            cpf: '<h4 class="cores">Informe um CPF válido</h4>'
           },
           email: {
-            required: 'Por favor, informe o e-mail',
-            email: 'Informe um e-mail válido'
+            required: '<h4 class="cores">Por favor, informe o e-mail</h4>',
+            email: '<h4 class="cores">Informe um e-mail válido</h4>'
           },
           telefone: {
-            required: 'Por favor, informe o telefone',
-            minlength: 'O telefone deve ter pelo menos 11 caracteres'
+            required: '<h4 class="cores">Por favor, informe o telefone</h4>',
+            minlength: '<h4 class="cores">O telefone deve ter pelo menos 11 caracteres</h4>'
           },
           endereco: {
-            required: 'Por favor, informe o endereço'
+            required: '<h4 class="cores">Por favor, informe o endereço</h4>'
           },
           uf: {
-            required: 'Por favor, informe a UF'
+            required: '<h4 class="cores">Por favor, informe a UF</h4>'
           },
           cidade: {
-            required: 'Por favor, informe a cidade'
+            required: '<h4 class="cores">Por favor, informe a cidade</h4>'
           },
           cep: {
-            required: 'Por favor, informe o CEP',
-            minlength: 'O CEP deve ter pelo menos 8 caracteres'
+            required: '<h4 class="cores">Por favor, informe o CEP</h4>',
+            minlength: '<h4 class="cores">O CEP deve ter pelo menos 8 caracteres</h4>'
           }
         }
       });
